@@ -17,3 +17,5 @@ Sin implementar:
 * comprobar si hay algun cambio en los lanzamientos y enviar en caso positivo una actualizacion de los mismos
 * adecentar el estado de las descripciones de los comando junto con sus nombres
 
+
+---
