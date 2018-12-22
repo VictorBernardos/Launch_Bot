@@ -15,7 +15,6 @@ url = 'https://launchlibrary.net/1.4/launch'
 TOKEN = "TOKEN"
 
 
-
 print ('Bot iniciado') 
 lista=[]
 
@@ -37,21 +36,7 @@ def eliminar(bot,update):
 		bot.sendMessage(update.message.chat_id,no_emoji+"Has sido correctamente eliminado de la lista y no recibiras notificaciones"+no_emoji)
 	else:
 		 bot.sendMessage(update.message.chat_id,"Para ser eliminado de la lista, primero debes estar en ella")
-
-
 	
-#def debug (bot,update):
-#    global aviso_cansi
-#    global aviso_victor
-#    if (update.message.chat_id == cansi_id):
-#        print (aviso_cansi)
-#
-#    elif (update.message.chat_id == victor_id):
-#        print (aviso_victor)
-#
-#    else:
-#        print ('Soy alguien random')
-
 def estado (bot,update):
 
 	global lista
@@ -172,7 +157,7 @@ def automatico(bot,chatid):
 		video = array [0] ['vidURLs']   
 
 	except KeyError:
-		print("No hay enlace de video")    #
+		print("No hay enlace de video")    
 
 	else: 
 		vid=video[0].split("[")
@@ -222,7 +207,7 @@ estado_handler = CommandHandler('estado', estado)
 dispatcher.add_handler(estado_handler)
 
 job = updater.job_queue
-job.run_daily(callback_auto, time=datetime.time(16,44,00))
+job.run_daily(callback_auto, time=datetime.time(9,00,00))
 
 updater.start_polling() #recibe las actualizaciones
 updater.idle()  #Se queda escuchando hast a que se cierra el programa
