@@ -1,4 +1,4 @@
-@LaunchSpace_bot
+#@LaunchSpace_bot
 Bot de telegram, notifica de los próximos lanzamientos espaciales
 
 Tiene los siguientes comandos:
